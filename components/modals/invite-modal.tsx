@@ -35,6 +35,7 @@ const InviteModal = () => {
       setCopied(false);
     }, 1000);
   };
+  
   const onNew = async () => {
     try {
       setIsLoading(true);

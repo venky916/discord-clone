@@ -27,7 +27,7 @@ const ChatHeader = ({
       {type === "conversation" && (
         <UserAvatar
           src={imageUrl}
-          className="h-8 w-8 md:h-8 md:w-8 mr-2"
+          className="h-5 w-5 md:h-8 md:w-8 mr-2"
         />
       )}
       <p className="font-semibold text-md text-black dark:text-white">

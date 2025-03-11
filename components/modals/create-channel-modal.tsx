@@ -2,9 +2,7 @@
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-
 import qs from "query-string";
-
 import axios from "axios";
 import {
   Dialog,
@@ -89,6 +87,7 @@ const CreateChannelModal = () => {
       console.log(error);
     }
   };
+  
   const handleClose = () => {
     form.reset();
     onClose();
@@ -133,7 +132,9 @@ const CreateChannelModal = () => {
                 name="type"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Channel Type</FormLabel>
+                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                      Channel Type
+                    </FormLabel>
                     <Select
                       disabled={isLoading}
                       onValueChange={field.onChange}
